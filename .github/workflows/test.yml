@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: osx-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: configure
+      run: brew install tmate
+    - name: test
+      run: tmate
