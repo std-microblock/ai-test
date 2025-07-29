@@ -13,7 +13,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: brew install tmate
-    - name: test
-      run: tmate
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
